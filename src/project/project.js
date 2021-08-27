@@ -1,4 +1,4 @@
-import createTodo from './todos/todos.js'; 
+import createTodo from '../todos/todo.js'; 
 
 const project = (name) => {
     let todos = new Map(); 

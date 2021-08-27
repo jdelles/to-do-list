@@ -1,4 +1,4 @@
-import project from './project/project.js'
+import project from '../project/project.js'
 
 const projectManager = () => {
     let activeProject; 
@@ -40,8 +40,9 @@ const projectManager = () => {
         // update UI
     }
 
-    const defaultProject = (() => {
+    const createDefaultProject = (() => {
         defaultProject = createProject("default"); 
+        projectKeys.push("default"); 
         activeProject = defaultProject; 
     })(); 
 
@@ -59,3 +60,6 @@ const projectManager = () => {
 }
 
 export default projectManager; 
+
+// what if default project is delete? set to the first key in the list?
+// what if the project list is empty? set active project to empty? make other functions fail until there is an active project?

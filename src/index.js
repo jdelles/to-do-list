@@ -1,1 +1,4 @@
-import createTodo from "./todos/todo.js"; 
+import load from "./ui/ui.js"; 
+import './style.css'; 
+
+load();
