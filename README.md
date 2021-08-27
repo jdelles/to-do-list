@@ -25,7 +25,7 @@ This is the final project in this section of the JavaScript section titled Organ
 
 ## To do 
 - [X] Create to do objects with factory functions or classes. Add required properties.
-- [ ] Add functionality to separate to dos into multiple projects
+- [X] Add functionality to separate to dos into multiple projects
 - [ ] Separate application logic from DOM interaction (MVC pattern)
 - [ ] UI Design objectives: A user must be able to 1. View all projects. 2. View all to dos in each project. 3. Expand a single to do to see / edit it's details. 4. Delete a to do. 
 - [ ] Consider using date-fns for manipulating dates and times
