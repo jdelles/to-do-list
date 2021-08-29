@@ -2,8 +2,6 @@ import project from '../project/project.js';
 import projectManager from '../toDoManager/toDoManager.js'; 
 
 function toDoForm() {
-    const main = document.querySelector("main"); 
-    main.innerHTML = ""; 
     const formDiv = document.createElement("div"); 
 
     const intro = document.createElement("h2"); 
@@ -38,15 +36,13 @@ function toDoForm() {
 
     formDiv.appendChild(intro); 
     formDiv.appendChild(form);
-    // formDiv.classList.add('hidden'); 
+    formDiv.classList.add('hidden'); 
     formDiv.id = "toDoForm"; 
 
-    main.appendChild(formDiv); 
+    return formDiv; 
 }
 
 function projectForm() {
-    const main = document.querySelector("main"); 
-    main.innerHTML = ""; 
     const projectDiv = document.createElement("div"); 
 
     const intro = document.createElement("h2"); 
@@ -66,10 +62,10 @@ function projectForm() {
 
     projectDiv.appendChild(intro); 
     projectDiv.appendChild(form);
-    // formDiv.classList.add('hidden'); 
+    projectDiv.classList.add('hidden'); 
     projectDiv.id = "projectForm"; 
 
-    main.appendChild(projectDiv); 
+    return projectDiv; 
 }
 
 function loadHeader() {
@@ -120,10 +116,10 @@ function loadFooter() {
 function load() {
     const content = document.getElementById("content");
     content.appendChild(loadHeader()); 
-    content.appendChild(loadMain()); 
+    const main = content.appendChild(loadMain()); 
+    main.appendChild(toDoForm()); 
+    main.appendChild(projectForm()); 
     content.appendChild(loadFooter()); 
-    toDoForm(); 
-    projectForm(); 
   }
  
   export default load; 
