@@ -87,3 +87,16 @@ footer a:hover {
 .hidden {
     display: none; 
 }
+
+.ghost-button {
+    padding: 5px 10px; 
+    margin: 5px; 
+    background-color: var(--color-anti-flash-white); 
+    color: var(--color-middle-blue);
+    font-size: 18px; 
+    border: 1px solid var(--color-middle-blue);; 
+}
+
+.ghost-button:hover {
+    color: var(--color-white-cream); 
+}

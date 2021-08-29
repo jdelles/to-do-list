@@ -5,7 +5,7 @@ function toDoForm() {
     const formDiv = document.createElement("div"); 
 
     const intro = document.createElement("h2"); 
-    intro.textContent = "Add a to do item"; 
+    intro.textContent = "Add a new to do"; 
     
     const form = document.createElement("form");
 
@@ -23,16 +23,24 @@ function toDoForm() {
 
     const date = document.createElement("input"); 
     date.type = "text"; 
-    date.placeholder = "date"; 
+    date.placeholder = "Date"; 
 
     const submit = document.createElement("button"); 
     submit.textContent = "Submit"; 
+    // form.addEventListener("submit", (e) => {
+    //     e.preventDefault(); 
+    // }); 
+
+    const cancel = document.createElement("button"); 
+    cancel.classList.add('ghost-button'); 
+    cancel.textContent = "Cancel"; 
 
     form.appendChild(title); 
     form.appendChild(description);
     form.appendChild(priority);
     form.appendChild(date);
     form.appendChild(submit); 
+    form.appendChild(cancel); 
 
     formDiv.appendChild(intro); 
     formDiv.appendChild(form);
@@ -81,12 +89,17 @@ function loadHeader() {
     
     const addToDo = document.createElement("button");
     addToDo.addEventListener("click", () => {
+        preventDefault();
+        const form = document.getElementById('toDoForm'); 
+        form.classList.remove('hidden'); 
         projectManager.addTodoToSpecifiedProject(title, description, date, priority, projectName); 
     });  
     addToDo.textContent = "+ Todo"; 
     
     const addProject = document.createElement("button"); 
     addProject.addEventListener("click", () => {
+        const form = document.getElementById('projectForm'); 
+        form.classList.remove('hidden'); 
         projectManager.createProject(name); 
     });
     addProject.textContent = "+ Project"; 
