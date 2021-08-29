@@ -83,3 +83,7 @@ footer a:hover {
     color: var(--color-white-smoke); 
     cursor: pointer;
 }
+
+.hidden {
+    display: none; 
+}

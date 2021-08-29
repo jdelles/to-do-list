@@ -1,4 +1,76 @@
+import project from '../project/project.js';
 import projectManager from '../toDoManager/toDoManager.js'; 
+
+function toDoForm() {
+    const main = document.querySelector("main"); 
+    main.innerHTML = ""; 
+    const formDiv = document.createElement("div"); 
+
+    const intro = document.createElement("h2"); 
+    intro.textContent = "Add a to do item"; 
+    
+    const form = document.createElement("form");
+
+    const title = document.createElement("input"); 
+    title.type = "text"; 
+    title.placeholder = "Title"; 
+
+    const description = document.createElement("input"); 
+    description.type = "text"; 
+    description.placeholder = "Description"; 
+
+    const priority = document.createElement("input"); 
+    priority.type = "text"; 
+    priority.placeholder = "Priority"; 
+
+    const date = document.createElement("input"); 
+    date.type = "text"; 
+    date.placeholder = "date"; 
+
+    const submit = document.createElement("button"); 
+    submit.textContent = "Submit"; 
+
+    form.appendChild(title); 
+    form.appendChild(description);
+    form.appendChild(priority);
+    form.appendChild(date);
+    form.appendChild(submit); 
+
+    formDiv.appendChild(intro); 
+    formDiv.appendChild(form);
+    // formDiv.classList.add('hidden'); 
+    formDiv.id = "toDoForm"; 
+
+    main.appendChild(formDiv); 
+}
+
+function projectForm() {
+    const main = document.querySelector("main"); 
+    main.innerHTML = ""; 
+    const projectDiv = document.createElement("div"); 
+
+    const intro = document.createElement("h2"); 
+    intro.textContent = "Add a new project"; 
+    
+    const form = document.createElement("form");
+
+    const title = document.createElement("input"); 
+    title.type = "text"; 
+    title.placeholder = "Project Name"; 
+
+    const submit = document.createElement("button"); 
+    submit.textContent = "Submit"; 
+
+    form.appendChild(title); 
+    form.appendChild(submit); 
+
+    projectDiv.appendChild(intro); 
+    projectDiv.appendChild(form);
+    // formDiv.classList.add('hidden'); 
+    projectDiv.id = "projectForm"; 
+
+    main.appendChild(projectDiv); 
+}
 
 function loadHeader() {
     const header = document.createElement("header");
@@ -50,6 +122,8 @@ function load() {
     content.appendChild(loadHeader()); 
     content.appendChild(loadMain()); 
     content.appendChild(loadFooter()); 
+    toDoForm(); 
+    projectForm(); 
   }
  
   export default load; 
