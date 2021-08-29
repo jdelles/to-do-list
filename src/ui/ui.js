@@ -27,13 +27,17 @@ function toDoForm() {
 
     const submit = document.createElement("button"); 
     submit.textContent = "Submit"; 
-    // form.addEventListener("submit", (e) => {
-    //     e.preventDefault(); 
-    // }); 
+    submit.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
+
 
     const cancel = document.createElement("button"); 
     cancel.classList.add('ghost-button'); 
     cancel.textContent = "Cancel"; 
+    cancel.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
 
     form.appendChild(title); 
     form.appendChild(description);
@@ -41,6 +45,8 @@ function toDoForm() {
     form.appendChild(date);
     form.appendChild(submit); 
     form.appendChild(cancel); 
+
+
 
     formDiv.appendChild(intro); 
     formDiv.appendChild(form);
@@ -64,9 +70,20 @@ function projectForm() {
 
     const submit = document.createElement("button"); 
     submit.textContent = "Submit"; 
+    submit.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
+
+    const cancel = document.createElement("button"); 
+    cancel.classList.add('ghost-button'); 
+    cancel.textContent = "Cancel"; 
+    cancel.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
 
     form.appendChild(title); 
     form.appendChild(submit); 
+    form.appendChild(cancel);
 
     projectDiv.appendChild(intro); 
     projectDiv.appendChild(form);
@@ -88,8 +105,8 @@ function loadHeader() {
     const nav = document.createElement("nav"); 
     
     const addToDo = document.createElement("button");
-    addToDo.addEventListener("click", () => {
-        preventDefault();
+    addToDo.addEventListener('click', (event) => {
+        event.preventDefault();
         const form = document.getElementById('toDoForm'); 
         form.classList.remove('hidden'); 
         projectManager.addTodoToSpecifiedProject(title, description, date, priority, projectName); 
@@ -97,7 +114,8 @@ function loadHeader() {
     addToDo.textContent = "+ Todo"; 
     
     const addProject = document.createElement("button"); 
-    addProject.addEventListener("click", () => {
+    addProject.addEventListener('click', (event) => {
+        event.preventDefault();
         const form = document.getElementById('projectForm'); 
         form.classList.remove('hidden'); 
         projectManager.createProject(name); 
