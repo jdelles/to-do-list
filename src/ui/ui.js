@@ -108,8 +108,16 @@ function loadHeader() {
     addToDo.addEventListener('click', (event) => {
         event.preventDefault();
         const form = document.getElementById('toDoForm'); 
-        form.classList.remove('hidden'); 
-        projectManager.addTodoToSpecifiedProject(title, description, date, priority, projectName); 
+
+        if (form.classList.contains('hidden')) {
+            const projectForm = document.getElementById('projectForm'); 
+            if (!projectForm.classList.contains('hidden')) {
+                projectForm.classList.add('hidden'); 
+            }
+            form.classList.remove('hidden'); 
+        } else {
+            form.classList.add('hidden'); 
+        }
     });  
     addToDo.textContent = "+ Todo"; 
     
@@ -117,8 +125,15 @@ function loadHeader() {
     addProject.addEventListener('click', (event) => {
         event.preventDefault();
         const form = document.getElementById('projectForm'); 
-        form.classList.remove('hidden'); 
-        projectManager.createProject(name); 
+        if (form.classList.contains('hidden')) {
+            const toDoForm = document.getElementById('toDoForm'); 
+            if (!toDoForm.classList.contains('hidden')) {
+                toDoForm.classList.add('hidden'); 
+            }
+            form.classList.remove('hidden'); 
+        } else {
+            form.classList.add('hidden'); 
+        }
     });
     addProject.textContent = "+ Project"; 
     

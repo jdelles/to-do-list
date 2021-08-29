@@ -27,7 +27,7 @@ header {
 
 button {
     padding: 5px 10px; 
-    margin: 5px; 
+    margin: 5px 10px 5px 0px; 
     background-color: var(--color-middle-blue);
     color: var(--color-white-cream); 
     font-size: 18px; 
@@ -99,4 +99,17 @@ footer a:hover {
 
 .ghost-button:hover {
     color: var(--color-white-cream); 
+}
+
+#toDoForm, 
+#projectForm {
+    border: 2px solid var(--color-middle-blue); 
+    border-radius: 10px;
+    padding: 15px; 
+    box-shadow: 5px 10px var(--color-iceberg); 
+}
+
+#toDoForm h2,
+#projectForm h2 {
+    margin: 10px auto; 
 }
