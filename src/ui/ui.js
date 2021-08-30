@@ -1,4 +1,3 @@
-import project from '../project/project.js';
 import projectManager from '../toDoManager/toDoManager.js'; 
 
 function toDoForm() {
@@ -12,23 +11,31 @@ function toDoForm() {
     const title = document.createElement("input"); 
     title.type = "text"; 
     title.placeholder = "Title"; 
+    title.id = "title"; 
 
     const description = document.createElement("input"); 
     description.type = "text"; 
     description.placeholder = "Description"; 
+    description.id = "description";
 
     const priority = document.createElement("input"); 
     priority.type = "text"; 
     priority.placeholder = "Priority"; 
+    priority.id = "priority";
 
     const date = document.createElement("input"); 
     date.type = "text"; 
     date.placeholder = "Date"; 
+    date.id = "date"; 
 
     const submit = document.createElement("button"); 
     submit.textContent = "Submit"; 
     submit.addEventListener('click', (event) => {
         event.preventDefault();
+        const title = document.querySelector("#title").value; 
+        const description = document.querySelector("#description").value; 
+        const priority = document.querySelector("#priority").value; 
+        const date = document.querySelector("#date").value; 
     });
 
 
@@ -37,6 +44,11 @@ function toDoForm() {
     cancel.textContent = "Cancel"; 
     cancel.addEventListener('click', (event) => {
         event.preventDefault();
+        document.querySelector("#title").value = ""; 
+        document.querySelector("#description").value = ""; 
+        document.querySelector("#priority").value = ""; 
+        document.querySelector("#date").value = ""; 
+        document.querySelector("#toDoForm").classList.add("hidden"); 
     });
 
     form.appendChild(title); 
@@ -67,11 +79,14 @@ function projectForm() {
     const title = document.createElement("input"); 
     title.type = "text"; 
     title.placeholder = "Project Name"; 
+    title.id = "projectName"; 
 
     const submit = document.createElement("button"); 
     submit.textContent = "Submit"; 
     submit.addEventListener('click', (event) => {
         event.preventDefault();
+        const name = document.querySelector("#projectName"); 
+        projectManager.createProject(name); 
     });
 
     const cancel = document.createElement("button"); 
@@ -79,6 +94,8 @@ function projectForm() {
     cancel.textContent = "Cancel"; 
     cancel.addEventListener('click', (event) => {
         event.preventDefault();
+        document.querySelector("#projectName").value = ""; 
+        document.querySelector("#projectForm").classList.add("hidden"); 
     });
 
     form.appendChild(title); 
