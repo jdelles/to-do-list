@@ -1,1 +1,228 @@
-(()=>{var e={426:(e,t,n)=>{"use strict";n.d(t,{Z:()=>a});var o=n(645),r=n.n(o)()((function(e){return e[1]}));r.push([e.id,":root {\n    --color-anti-flash-white: #f2f2f2;\n    --color-white-smoke: #f4faf7;\n    --color-white-cream: #f4fffb; \n    --color-middle-blue: #81d0e8; \n    --color-iceberg: #71a1d1; \n}\n\n*, \n*::after, \n*::before {\n    margin: 0; \n    padding: 0; \n    box-sizing: border-box;\n}\n\nbody {\n    background: var(--color-anti-flash-white);\n}\n\nheader {\n    text-align: center;\n    background: var(--color-white-smoke); \n    font-size: 24px;\n    padding: 2em;\n}\n\nbutton {\n    padding: 5px 10px; \n    margin: 5px 10px 5px 0px; \n    background-color: var(--color-middle-blue);\n    color: var(--color-white-cream); \n    font-size: 18px; \n    border: 1px solid transparent; \n}\n\nbutton:hover {\n    background: var(--color-iceberg);\n    cursor: pointer;\n}\n\nmain {\n    margin: 0 auto; \n    padding: 2em; \n    max-width: 700px; \n}\n\nmain h2 {\n    font-size: 22px; \n    margin-bottom: 5px; \n}\n\nmain p,\nmain li {\n    font-size: 18px; \n    margin-bottom: 5px; \n}\n\ninput {\n    width: 100%; \n    margin-bottom: 5px; \n    font-size: 16px; \n    padding: 5px; \n}\n\nfooter {\n    position: fixed; \n    bottom: 0; \n    width: 100%; \n    background: var(--color-middle-blue); \n    color: var(--color-white-smoke); \n    font-size: 16px; \n    padding: 1em; \n    text-align: center; \n}\n\nfooter a {\n    color: var(--color-iceberg); \n    text-decoration: none;\n}\n\nfooter a:hover {\n    color: var(--color-white-smoke); \n    cursor: pointer;\n}\n\n.hidden {\n    display: none; \n}\n\n.ghost-button {\n    padding: 5px 10px; \n    margin: 5px; \n    background-color: var(--color-anti-flash-white); \n    color: var(--color-middle-blue);\n    font-size: 18px; \n    border: 1px solid var(--color-middle-blue);; \n}\n\n.ghost-button:hover {\n    color: var(--color-white-cream); \n}\n\n#toDoForm, \n#projectForm {\n    border: 2px solid var(--color-middle-blue); \n    border-radius: 10px;\n    padding: 15px; \n    box-shadow: 5px 10px var(--color-iceberg); \n}\n\n#toDoForm h2,\n#projectForm h2 {\n    margin: 10px auto; \n}",""]);const a=r},645:e=>{"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var n=e(t);return t[2]?"@media ".concat(t[2]," {").concat(n,"}"):n})).join("")},t.i=function(e,n,o){"string"==typeof e&&(e=[[null,e,""]]);var r={};if(o)for(var a=0;a<this.length;a++){var c=this[a][0];null!=c&&(r[c]=!0)}for(var d=0;d<e.length;d++){var i=[].concat(e[d]);o&&r[i[0]]||(n&&(i[2]?i[2]="".concat(n," and ").concat(i[2]):i[2]=n),t.push(i))}},t}},379:e=>{"use strict";var t=[];function n(e){for(var n=-1,o=0;o<t.length;o++)if(t[o].identifier===e){n=o;break}return n}function o(e,o){for(var a={},c=[],d=0;d<e.length;d++){var i=e[d],l=o.base?i[0]+o.base:i[0],s=a[l]||0,u="".concat(l," ").concat(s);a[l]=s+1;var p=n(u),m={css:i[1],media:i[2],sourceMap:i[3]};-1!==p?(t[p].references++,t[p].updater(m)):t.push({identifier:u,updater:r(m,o),references:1}),c.push(u)}return c}function r(e,t){var n=t.domAPI(t);return n.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;n.update(e=t)}else n.remove()}}e.exports=function(e,r){var a=o(e=e||[],r=r||{});return function(e){e=e||[];for(var c=0;c<a.length;c++){var d=n(a[c]);t[d].references--}for(var i=o(e,r),l=0;l<a.length;l++){var s=n(a[l]);0===t[s].references&&(t[s].updater(),t.splice(s,1))}a=i}}},569:e=>{"use strict";var t={};e.exports=function(e,n){var o=function(e){if(void 0===t[e]){var n=document.querySelector(e);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}t[e]=n}return t[e]}(e);if(!o)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");o.appendChild(n)}},216:e=>{"use strict";e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t),t}},565:(e,t,n)=>{"use strict";e.exports=function(e){var t=n.nc;t&&e.setAttribute("nonce",t)}},795:e=>{"use strict";e.exports=function(e){var t=e.insertStyleElement(e);return{update:function(n){!function(e,t,n){var o=n.css,r=n.media,a=n.sourceMap;r?e.setAttribute("media",r):e.removeAttribute("media"),a&&"undefined"!=typeof btoa&&(o+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleTagTransform(o,e)}(t,e,n)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},589:e=>{"use strict";e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}},134:function(){}},t={};function n(o){var r=t[o];if(void 0!==r)return r.exports;var a=t[o]={id:o,exports:{}};return e[o].call(a.exports,a,a.exports,n),a.exports}n.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return n.d(t,{a:t}),t},n.d=(e,t)=>{for(var o in t)n.o(t,o)&&!n.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{"use strict";var e=n(134),t=n.n(e);const o=e=>{let n=new Map,o=new Array;return{name:e,getToDos:()=>n,addTodoToProject:(e,r,a,c)=>{if((e=>!n.has(e))()){const d=t()(e,r,a,c);n.set(e,d),o.push(e)}else alert("ToDos must have a unique name")},removeTodoFromProject:e=>{n.delete(e);const t=o.indexOf(e);t>-1&&o.splice(t,1)}}},r=()=>{let e,t;const n=new Map,r=new Array,a=t=>{e=t},c=e=>{if((e=>!n.has(e))(e)){const t=o(e);return a(t),n.set(e,t),r.push(e),t}alert("Project name must be unique")};return t=c("default"),r.push("default"),e=t,{activeProject:e,setActiveProject:a,createProject:c,deleteProject:o=>{n.get(o).getToDos().forEach(removeTodoFromProject),n.delete(o);const a=r.indexOf(o);a>-1&&r.splice(a,1),e=t}}};var a=n(379),c=n.n(a),d=n(795),i=n.n(d),l=n(569),s=n.n(l),u=n(565),p=n.n(u),m=n(216),h=n.n(m),f=n(589),v=n.n(f),x=n(426),b={};b.styleTagTransform=v(),b.setAttributes=p(),b.insert=s().bind(null,"head"),b.domAPI=i(),b.insertStyleElement=h(),c()(x.Z,b),x.Z&&x.Z.locals&&x.Z.locals,function(){const e=document.getElementById("content");e.appendChild(function(){const e=document.createElement("header"),t=document.createElement("h1");t.textContent="To Do List",e.appendChild(t);const n=document.createElement("nav"),o=document.createElement("button");o.addEventListener("click",(e=>{e.preventDefault();const t=document.getElementById("toDoForm");if(t.classList.contains("hidden")){const e=document.getElementById("projectForm");e.classList.contains("hidden")||e.classList.add("hidden"),t.classList.remove("hidden")}else t.classList.add("hidden")})),o.textContent="+ Todo";const r=document.createElement("button");return r.addEventListener("click",(e=>{e.preventDefault();const t=document.getElementById("projectForm");if(t.classList.contains("hidden")){const e=document.getElementById("toDoForm");e.classList.contains("hidden")||e.classList.add("hidden"),t.classList.remove("hidden")}else t.classList.add("hidden")})),r.textContent="+ Project",n.appendChild(o),n.appendChild(r),e.appendChild(n),e}());const t=e.appendChild(document.createElement("main"));t.appendChild(function(){const e=document.createElement("div"),t=document.createElement("h2");t.textContent="Add a new to do";const n=document.createElement("form"),o=document.createElement("input");o.type="text",o.placeholder="Title",o.id="title";const r=document.createElement("input");r.type="text",r.placeholder="Description",r.id="description";const a=document.createElement("input");a.type="text",a.placeholder="Priority",a.id="priority";const c=document.createElement("input");c.type="text",c.placeholder="Date",c.id="date";const d=document.createElement("button");d.textContent="Submit",d.addEventListener("click",(e=>{e.preventDefault(),document.querySelector("#title").value,document.querySelector("#description").value,document.querySelector("#priority").value,document.querySelector("#date").value}));const i=document.createElement("button");return i.classList.add("ghost-button"),i.textContent="Cancel",i.addEventListener("click",(e=>{e.preventDefault(),document.querySelector("#title").value="",document.querySelector("#description").value="",document.querySelector("#priority").value="",document.querySelector("#date").value="",document.querySelector("#toDoForm").classList.add("hidden")})),n.appendChild(o),n.appendChild(r),n.appendChild(a),n.appendChild(c),n.appendChild(d),n.appendChild(i),e.appendChild(t),e.appendChild(n),e.classList.add("hidden"),e.id="toDoForm",e}()),t.appendChild(function(){const e=document.createElement("div"),t=document.createElement("h2");t.textContent="Add a new project";const n=document.createElement("form"),o=document.createElement("input");o.type="text",o.placeholder="Project Name",o.id="projectName";const a=document.createElement("button");a.textContent="Submit",a.addEventListener("click",(e=>{e.preventDefault();const t=document.querySelector("#projectName");r.createProject(t)}));const c=document.createElement("button");return c.classList.add("ghost-button"),c.textContent="Cancel",c.addEventListener("click",(e=>{e.preventDefault(),document.querySelector("#projectName").value="",document.querySelector("#projectForm").classList.add("hidden")})),n.appendChild(o),n.appendChild(a),n.appendChild(c),e.appendChild(t),e.appendChild(n),e.classList.add("hidden"),e.id="projectForm",e}()),e.appendChild(function(){const e=document.createElement("footer"),t=document.createElement("div");return t.innerHTML='<p>Copyright © <a href="https://www.github.com/jdelles">James Delles</a> 2021</p>',e.appendChild(t),e}())}()})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\n    --color-anti-flash-white: #f2f2f2;\\n    --color-white-smoke: #f4faf7;\\n    --color-white-cream: #f4fffb; \\n    --color-middle-blue: #81d0e8; \\n    --color-iceberg: #71a1d1; \\n}\\n\\n*, \\n*::after, \\n*::before {\\n    margin: 0; \\n    padding: 0; \\n    box-sizing: border-box;\\n}\\n\\nbody {\\n    background: var(--color-anti-flash-white);\\n}\\n\\nheader {\\n    text-align: center;\\n    background: var(--color-white-smoke); \\n    font-size: 24px;\\n    padding: 2em;\\n}\\n\\nbutton {\\n    padding: 5px 10px; \\n    margin: 5px 10px 5px 0px; \\n    background-color: var(--color-middle-blue);\\n    color: var(--color-white-cream); \\n    font-size: 18px; \\n    border: 1px solid transparent; \\n}\\n\\nbutton:hover {\\n    background: var(--color-iceberg);\\n    cursor: pointer;\\n}\\n\\nmain {\\n    margin: 0 auto; \\n    padding: 2em; \\n    max-width: 700px; \\n}\\n\\nmain h2 {\\n    font-size: 22px; \\n    margin-bottom: 5px; \\n}\\n\\nmain p,\\nmain li {\\n    font-size: 18px; \\n    margin-bottom: 5px; \\n}\\n\\ninput {\\n    width: 100%; \\n    margin-bottom: 5px; \\n    font-size: 16px; \\n    padding: 5px; \\n}\\n\\nfooter {\\n    position: fixed; \\n    bottom: 0; \\n    width: 100%; \\n    background: var(--color-middle-blue); \\n    color: var(--color-white-smoke); \\n    font-size: 16px; \\n    padding: 1em; \\n    text-align: center; \\n}\\n\\nfooter a {\\n    color: var(--color-iceberg); \\n    text-decoration: none;\\n}\\n\\nfooter a:hover {\\n    color: var(--color-white-smoke); \\n    cursor: pointer;\\n}\\n\\n.hidden {\\n    display: none; \\n}\\n\\n.ghost-button {\\n    padding: 5px 10px; \\n    margin: 5px; \\n    background-color: var(--color-anti-flash-white); \\n    color: var(--color-middle-blue);\\n    font-size: 18px; \\n    border: 1px solid var(--color-middle-blue);; \\n}\\n\\n.ghost-button:hover {\\n    color: var(--color-white-cream); \\n}\\n\\n#toDoForm, \\n#projectForm {\\n    border: 2px solid var(--color-middle-blue); \\n    border-radius: 10px;\\n    padding: 15px; \\n    box-shadow: 5px 10px var(--color-iceberg); \\n}\\n\\n#toDoForm h2,\\n#projectForm h2 {\\n    margin: 10px auto; \\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === \"string\") {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, \"\"]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://to-do-list/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ \"./node_modules/style-loader/dist/runtime/styleDomAPI.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ \"./node_modules/style-loader/dist/runtime/insertBySelector.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ \"./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ \"./node_modules/style-loader/dist/runtime/insertStyleElement.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ \"./node_modules/style-loader/dist/runtime/styleTagTransform.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/style.css\");\n\n      \n      \n      \n      \n      \n      \n      \n      \n      \n\nvar options = {};\n\noptions.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());\noptions.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());\n\n      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, \"head\");\n    \noptions.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());\noptions.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default, options);\n\n\n\n\n       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default && _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default.locals ? _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__.default.locals : undefined);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+eval("\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction addStyle(obj, options) {\n  var api = options.domAPI(options);\n  api.update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      api.update(obj = newObj);\n    } else {\n      api.remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {};\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(target) {\n  if (typeof memo[target] === \"undefined\") {\n    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n      try {\n        // This will throw an exception if access to iframe is blocked\n        // due to cross-origin restrictions\n        styleTarget = styleTarget.contentDocument.head;\n      } catch (e) {\n        // istanbul ignore next\n        styleTarget = null;\n      }\n    }\n\n    memo[target] = styleTarget;\n  }\n\n  return memo[target];\n}\n/* istanbul ignore next  */\n\n\nfunction insertBySelector(insert, style) {\n  var target = getTarget(insert);\n\n  if (!target) {\n    throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n  }\n\n  target.appendChild(style);\n}\n\nmodule.exports = insertBySelector;\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/insertBySelector.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction insertStyleElement(options) {\n  var style = document.createElement(\"style\");\n  options.setAttributes(style, options.attributes);\n  options.insert(style);\n  return style;\n}\n\nmodule.exports = insertStyleElement;\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/insertStyleElement.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction setAttributesWithoutAttributes(style) {\n  var nonce =  true ? __webpack_require__.nc : 0;\n\n  if (nonce) {\n    style.setAttribute(\"nonce\", nonce);\n  }\n}\n\nmodule.exports = setAttributesWithoutAttributes;\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction apply(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute(\"media\", media);\n  } else {\n    style.removeAttribute(\"media\");\n  }\n\n  if (sourceMap && typeof btoa !== \"undefined\") {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  options.styleTagTransform(css, style);\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nfunction domAPI(options) {\n  var style = options.insertStyleElement(options);\n  return {\n    update: function update(obj) {\n      apply(style, options, obj);\n    },\n    remove: function remove() {\n      removeStyleElement(style);\n    }\n  };\n}\n\nmodule.exports = domAPI;\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/styleDomAPI.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://to-do-list/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ui_ui_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ui/ui.js */ \"./src/ui/ui.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n \n \n\n(0,_ui_ui_js__WEBPACK_IMPORTED_MODULE_0__.load)();\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/project/project.js":
+/*!********************************!*\
+  !*** ./src/project/project.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _todos_todo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todos/todo.js */ \"./src/todos/todo.js\");\n \n\nconst project = (name) => {\n    let todos = new Map(); \n    let todosKeys = new Array(); \n\n    const addTodoToProject = (title, description, date, priority) => {\n        if (validateTitle()) {\n            const todo = (0,_todos_todo_js__WEBPACK_IMPORTED_MODULE_0__.default)(title, description, date, priority); \n            todos.set(title, todo);\n            todosKeys.push(title);  \n        } else {\n            alert(\"ToDos must have a unique name\"); \n        }\n    }\n\n    const removeTodoFromProject = (title) => {\n        todos.delete(title); \n        const index = todosKeys.indexOf(title); \n        if (index > -1) {\n            todosKeys.splice(index, 1); \n        }\n    }\n\n    const validateTitle = (title) => {\n        return !todos.has(title); \n    }\n\n    const getToDos = () => {\n        return todos; \n    }\n\n    return {name, getToDos, addTodoToProject, removeTodoFromProject}; \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (project); \n\n//# sourceURL=webpack://to-do-list/./src/project/project.js?");
+
+/***/ }),
+
+/***/ "./src/toDoManager/toDoManager.js":
+/*!****************************************!*\
+  !*** ./src/toDoManager/toDoManager.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _project_project_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project/project.js */ \"./src/project/project.js\");\n\n\nconst projectManager = () => {\n    let activeProject; \n    let defaultProject; \n\n    const projects = new Map(); \n    const projectKeys = new Array(); \n\n    const validate = (name) => {\n        return !projects.has(name); \n    }\n\n    const setActiveProject = (newActive) => {\n        activeProject = newActive; \n        // update UI\n    }\n\n    const createProject = (name) => {\n        if (validate(name)) {\n            const newProject = (0,_project_project_js__WEBPACK_IMPORTED_MODULE_0__.default)(name); \n            setActiveProject(newProject); \n            projects.set(name, newProject);\n            projectKeys.push(name); \n            return newProject;  \n        } else {\n            alert('Project name must be unique'); \n        }\n    }\n\n    const deleteProject = (name) => {\n        const toDelete = projects.get(name); \n        toDelete.getToDos().forEach(removeTodoFromProject); \n        projects.delete(name); \n        const index = projectKeys.indexOf(name); \n        if (index > -1) {\n            projectKeys.splice(index, 1); \n        }\n        activeProject = defaultProject; \n        // update UI\n    }\n\n    const createDefaultProject = (() => {\n        defaultProject = createProject(\"default\"); \n        projectKeys.push(\"default\"); \n        activeProject = defaultProject; \n    })(); \n\n    const addTodoToSpecifiedProject = (title, description, date, priority, projectName) => {\n        projects.get(projectName).addTodoToProject(title, description, date, priority); \n        // update UI\n    }\n\n    const removeTodoFromSpecifiedProject = (title, description, date, priority, projectName) => {\n        projects.get(projectName).removeTodoToProject(title, description, date, priority); \n        // update UI\n    }\n\n    return {activeProject, setActiveProject, createProject, deleteProject}\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projectManager); \n\n// what if default project is delete? set to the first key in the list?\n// what if the project list is empty? set active project to empty? make other functions fail until there is an active project?\n\n//# sourceURL=webpack://to-do-list/./src/toDoManager/toDoManager.js?");
+
+/***/ }),
+
+/***/ "./src/todos/todo.js":
+/*!***************************!*\
+  !*** ./src/todos/todo.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst createTodo = (title, description, date, priority) => {\n    const setDate = (date) => undefined.date; \n    const setPriority = (priority) => undefined.priority; \n    return {title, description, date, priority, setDate, setPriority}; \n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createTodo); \n\n//# sourceURL=webpack://to-do-list/./src/todos/todo.js?");
+
+/***/ }),
+
+/***/ "./src/ui/ui.js":
+/*!**********************!*\
+  !*** ./src/ui/ui.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"todoTest\": () => (/* binding */ todoTest),\n/* harmony export */   \"load\": () => (/* binding */ load)\n/* harmony export */ });\n/* harmony import */ var _toDoManager_toDoManager_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../toDoManager/toDoManager.js */ \"./src/toDoManager/toDoManager.js\");\n/* harmony import */ var _todos_todo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../todos/todo.js */ \"./src/todos/todo.js\");\n \n \n\nlet todoTest = []; \n\nfunction toDoForm() {\n    const formDiv = document.createElement(\"div\"); \n\n    const intro = document.createElement(\"h2\"); \n    intro.textContent = \"Add a new to do\"; \n    \n    const form = document.createElement(\"form\");\n\n    const title = document.createElement(\"input\"); \n    title.type = \"text\"; \n    title.placeholder = \"Title\"; \n    title.id = \"title\"; \n\n    const description = document.createElement(\"input\"); \n    description.type = \"text\"; \n    description.placeholder = \"Description\"; \n    description.id = \"description\";\n\n    const priority = document.createElement(\"input\"); \n    priority.type = \"text\"; \n    priority.placeholder = \"Priority\"; \n    priority.id = \"priority\";\n\n    const date = document.createElement(\"input\"); \n    date.type = \"text\"; \n    date.placeholder = \"Date\"; \n    date.id = \"date\"; \n\n    const submit = document.createElement(\"button\"); \n    submit.textContent = \"Submit\"; \n    submit.addEventListener('click', (event) => {\n        event.preventDefault();\n        const title = document.querySelector(\"#title\").value; \n        const description = document.querySelector(\"#description\").value; \n        const priority = document.querySelector(\"#priority\").value; \n        const date = document.querySelector(\"#date\").value; \n        todoTest.push((0,_todos_todo_js__WEBPACK_IMPORTED_MODULE_1__.default)(title, description, priority, date)); \n    });\n\n\n    const cancel = document.createElement(\"button\"); \n    cancel.classList.add('ghost-button'); \n    cancel.textContent = \"Cancel\"; \n    cancel.addEventListener('click', (event) => {\n        event.preventDefault();\n        document.querySelector(\"#title\").value = \"\"; \n        document.querySelector(\"#description\").value = \"\"; \n        document.querySelector(\"#priority\").value = \"\"; \n        document.querySelector(\"#date\").value = \"\"; \n        document.querySelector(\"#toDoForm\").classList.add(\"hidden\"); \n    });\n\n    form.appendChild(title); \n    form.appendChild(description);\n    form.appendChild(priority);\n    form.appendChild(date);\n    form.appendChild(submit); \n    form.appendChild(cancel); \n\n\n\n    formDiv.appendChild(intro); \n    formDiv.appendChild(form);\n    formDiv.classList.add('hidden'); \n    formDiv.id = \"toDoForm\"; \n\n    return formDiv; \n}\n\nfunction projectForm() {\n    const projectDiv = document.createElement(\"div\"); \n\n    const intro = document.createElement(\"h2\"); \n    intro.textContent = \"Add a new project\"; \n    \n    const form = document.createElement(\"form\");\n\n    const title = document.createElement(\"input\"); \n    title.type = \"text\"; \n    title.placeholder = \"Project Name\"; \n    title.id = \"projectName\"; \n\n    const submit = document.createElement(\"button\"); \n    submit.textContent = \"Submit\"; \n    submit.addEventListener('click', (event) => {\n        event.preventDefault();\n        const name = document.querySelector(\"#projectName\"); \n        _toDoManager_toDoManager_js__WEBPACK_IMPORTED_MODULE_0__.default.createProject(name); \n    });\n\n    const cancel = document.createElement(\"button\"); \n    cancel.classList.add('ghost-button'); \n    cancel.textContent = \"Cancel\"; \n    cancel.addEventListener('click', (event) => {\n        event.preventDefault();\n        document.querySelector(\"#projectName\").value = \"\"; \n        document.querySelector(\"#projectForm\").classList.add(\"hidden\"); \n    });\n\n    form.appendChild(title); \n    form.appendChild(submit); \n    form.appendChild(cancel);\n\n    projectDiv.appendChild(intro); \n    projectDiv.appendChild(form);\n    projectDiv.classList.add('hidden'); \n    projectDiv.id = \"projectForm\"; \n\n    return projectDiv; \n}\n\nfunction loadHeader() {\n    const header = document.createElement(\"header\");\n    \n    const name = document.createElement(\"h1\");\n    name.textContent = \"To Do List\";\n  \n    header.appendChild(name);\n\n    // add nav TODO: onclicks bugged\n    const nav = document.createElement(\"nav\"); \n    \n    const addToDo = document.createElement(\"button\");\n    addToDo.addEventListener('click', (event) => {\n        event.preventDefault();\n        const form = document.getElementById('toDoForm'); \n\n        if (form.classList.contains('hidden')) {\n            const projectForm = document.getElementById('projectForm'); \n            if (!projectForm.classList.contains('hidden')) {\n                projectForm.classList.add('hidden'); \n            }\n            form.classList.remove('hidden'); \n        } else {\n            form.classList.add('hidden'); \n        }\n    });  \n    addToDo.textContent = \"+ Todo\"; \n    \n    const addProject = document.createElement(\"button\"); \n    addProject.addEventListener('click', (event) => {\n        event.preventDefault();\n        const form = document.getElementById('projectForm'); \n        if (form.classList.contains('hidden')) {\n            const toDoForm = document.getElementById('toDoForm'); \n            if (!toDoForm.classList.contains('hidden')) {\n                toDoForm.classList.add('hidden'); \n            }\n            form.classList.remove('hidden'); \n        } else {\n            form.classList.add('hidden'); \n        }\n    });\n    addProject.textContent = \"+ Project\"; \n    \n    nav.appendChild(addToDo);\n    nav.appendChild(addProject); \n\n    header.appendChild(nav); \n\n    return header;\n  }\n\nfunction loadMain() {\n    return document.createElement(\"main\");\n}\n\nfunction loadFooter() {\n    const footer = document.createElement(\"footer\"); \n    const div = document.createElement(\"div\"); \n    div.innerHTML = '<p>Copyright © <a href=\"https://www.github.com/jdelles\">James Delles</a> 2021</p>'; \n\n    footer.appendChild(div); \n\n    return footer; \n}\n\nfunction load() {\n    const content = document.getElementById(\"content\");\n    content.appendChild(loadHeader()); \n    const main = content.appendChild(loadMain()); \n    main.appendChild(toDoForm()); \n    main.appendChild(projectForm()); \n    content.appendChild(loadFooter()); \n  }\n \n   \n\n//# sourceURL=webpack://to-do-list/./src/ui/ui.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
+/******/ })()
+;
