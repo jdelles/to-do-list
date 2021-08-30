@@ -3,3 +3,5 @@ const createTodo = (title, description, date, priority) => {
     const setPriority = (priority) => this.priority; 
     return {title, description, date, priority, setDate, setPriority}; 
 };
+
+export default createTodo; 

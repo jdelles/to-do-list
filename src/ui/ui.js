@@ -1,4 +1,7 @@
 import projectManager from '../toDoManager/toDoManager.js'; 
+import createTodo from '../todos/todo.js'; 
+
+let todoTest = []; 
 
 function toDoForm() {
     const formDiv = document.createElement("div"); 
@@ -36,6 +39,7 @@ function toDoForm() {
         const description = document.querySelector("#description").value; 
         const priority = document.querySelector("#priority").value; 
         const date = document.querySelector("#date").value; 
+        todoTest.push(createTodo(title, description, priority, date)); 
     });
 
 
@@ -185,4 +189,4 @@ function load() {
     content.appendChild(loadFooter()); 
   }
  
-  export default load; 
+  export {todoTest, load}; 
