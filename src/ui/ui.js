@@ -181,4 +181,4 @@ function load() {
     content.appendChild(loadFooter()); 
   }
  
-  export {load}; 
+  export default load; 

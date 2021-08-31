@@ -1,7 +1,3 @@
-import projectManager from '../toDoManager/toDoManager.js'; 
-
-let projects = projectManager.getProjects(); 
-
 /**
  * COPIED FROM LIBRARY PROJECT -- NOT YET SETUP FOR THIS PROJECT
  * 
