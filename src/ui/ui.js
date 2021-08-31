@@ -36,9 +36,7 @@ function toDoForm() {
         const description = document.querySelector("#description").value; 
         const priority = document.querySelector("#priority").value; 
         const date = document.querySelector("#date").value; 
-        todoTest.push(createTodo(title, description, priority, date)); 
     });
-
 
     const cancel = document.createElement("button"); 
     cancel.classList.add('ghost-button'); 
@@ -58,8 +56,6 @@ function toDoForm() {
     form.appendChild(date);
     form.appendChild(submit); 
     form.appendChild(cancel); 
-
-
 
     formDiv.appendChild(intro); 
     formDiv.appendChild(form);
@@ -87,7 +83,6 @@ function projectForm() {
     submit.addEventListener('click', (event) => {
         event.preventDefault();
         const name = document.querySelector("#projectName"); 
-        projectManager.createProject(name); 
     });
 
     const cancel = document.createElement("button"); 

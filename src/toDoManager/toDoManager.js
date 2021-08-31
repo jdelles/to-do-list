@@ -1,7 +1,6 @@
-import {load, save} from '../storage/storage.js'; 
+import {loadFromStorage, saveToStorage} from '../storage/storage.js'; 
 import Project from '../project/project.js'; 
 import ToDo from '../todos/todo.js'; 
-
 
 let projects = []; 
 

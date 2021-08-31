@@ -42,18 +42,18 @@ let projects = projectManager.getProjects();
   /**
    * Saves the to do list to local storage
    */
-  function save() {
+  function saveToStorage() {
     localStorage.setItem("projects", JSON.stringify(projects));
   }
   
   /**
    * Loads the to do list from local storage on page load
    */
-  function load() {
+  function loadFromStorage() {
     if (localStorage.projects) {
       let data = localStorage.getItem("projects");
       return JSON.parse(data);
     }
   }
 
-  export {save, load}; 
+  export {saveToStorage, loadFromStorage}; 
