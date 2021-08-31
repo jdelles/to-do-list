@@ -1,3 +1,6 @@
+import projectManager from '../toDoManager/toDoManager.js'; 
+
+let projects = projectManager.getProjects(); 
 
 /**
  * COPIED FROM LIBRARY PROJECT -- NOT YET SETUP FOR THIS PROJECT
@@ -40,18 +43,17 @@
    * Saves the to do list to local storage
    */
   function save() {
-    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+    localStorage.setItem("projects", JSON.stringify(projects));
   }
   
   /**
    * Loads the to do list from local storage on page load
    */
   function load() {
-    if (localStorage.myLibrary) {
-      let data = localStorage.getItem("myLibrary");
-      myLibrary = JSON.parse(data);
-      libraryDisplay();
+    if (localStorage.projects) {
+      let data = localStorage.getItem("projects");
+      return JSON.parse(data);
     }
   }
 
-  export default {save, load}; 
+  export {save, load}; 

@@ -1,36 +1,27 @@
-import createTodo from '../todos/todo.js'; 
-
-const project = (name) => {
-    let todos = new Map(); 
-    let todosKeys = new Array(); 
-
-    const addTodoToProject = (title, description, date, priority) => {
-        if (validateTitle()) {
-            const todo = createTodo(title, description, date, priority); 
-            todos.set(title, todo);
-            todosKeys.push(title);  
-        } else {
-            alert("ToDos must have a unique name"); 
-        }
+export class Project {
+    constructor(projectName) {
+        this.projectName = projectName; 
+        this.projectToDos = []; 
+        this.active = true; 
     }
 
-    const removeTodoFromProject = (title) => {
-        todos.delete(title); 
-        const index = todosKeys.indexOf(title); 
-        if (index > -1) {
-            todosKeys.splice(index, 1); 
-        }
+    get projectName() {
+        return this.projectName; 
     }
 
-    const validateTitle = (title) => {
-        return !todos.has(title); 
+    get projectToDos() {
+        return this.projectToDos; 
     }
 
-    const getToDos = () => {
-        return todos; 
+    set projectToDos(todo) {
+        this.projectToDos.push(todo); 
     }
 
-    return {name, getToDos, addTodoToProject, removeTodoFromProject}; 
+    get active() {
+        return this.active; 
+    }
+
+    set active(state) {
+        this.active = state; 
+    }
 }
-
-export default project; 

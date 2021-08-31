@@ -1,7 +1,4 @@
 import projectManager from '../toDoManager/toDoManager.js'; 
-import createTodo from '../todos/todo.js'; 
-
-let todoTest = []; 
 
 function toDoForm() {
     const formDiv = document.createElement("div"); 
@@ -189,4 +186,4 @@ function load() {
     content.appendChild(loadFooter()); 
   }
  
-  export {todoTest, load}; 
+  export {load}; 
