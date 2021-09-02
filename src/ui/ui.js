@@ -2,6 +2,7 @@ import projectManager from '../toDoManager/toDoManager.js';
 
 function updateDisplay() {
     const projectDiv = document.querySelector("#projectList"); 
+    showProjectList(); 
     projectDiv.innerHTML = ""; 
     projectManager.getProjects().forEach(project => {
         const p = document.createElement('p'); 
@@ -14,6 +15,54 @@ function projectDisplay() {
     const projectDiv = document.createElement("div"); 
     projectDiv.id = "projectList"; 
     return projectDiv; 
+}
+
+function showToDoList() {
+    const projectList = document.querySelector("#projectList");    
+    const projectForm = document.querySelector("#projectForm"); 
+    const toDoForm = document.querySelector("#toDoForm"); 
+    
+    if (!projectList.classList.contains('hidden')) {
+        projectList.classList.add('hidden'); 
+    }
+    if (toDoForm.classList.contains('hidden')) {
+        toDoForm.classList.remove('hidden'); 
+    }
+    if (!projectForm.classList.contains('hidden')) {
+        projectForm.classList.add('hidden'); 
+    }
+}
+
+function showProjectList() {
+    const projectList = document.querySelector("#projectList");    
+    const projectForm = document.querySelector("#projectForm"); 
+    const toDoForm = document.querySelector("#toDoForm"); 
+    
+    if (projectList.classList.contains('hidden')) {
+        projectList.classList.remove('hidden'); 
+    }
+    if (!toDoForm.classList.contains('hidden')) {
+        toDoForm.classList.add('hidden'); 
+    }
+    if (!projectForm.classList.contains('hidden')) {
+        projectForm.classList.add('hidden'); 
+    }
+}
+
+function showProjectForm() {
+    const projectList = document.querySelector("#projectList");    
+    const projectForm = document.querySelector("#projectForm"); 
+    const toDoForm = document.querySelector("#toDoForm"); 
+    
+    if (!projectList.classList.contains('hidden')) {
+        projectList.classList.add('hidden'); 
+    }
+    if (!toDoForm.classList.contains('hidden')) {
+        toDoForm.classList.add('hidden'); 
+    }
+    if (projectForm.classList.contains('hidden')) {
+        projectForm.classList.remove('hidden'); 
+    }
 }
 
 function toDoForm() {
@@ -63,7 +112,7 @@ function toDoForm() {
         document.querySelector("#description").value = ""; 
         document.querySelector("#priority").value = ""; 
         document.querySelector("#date").value = ""; 
-        document.querySelector("#toDoForm").classList.add("hidden"); 
+        showProjectList(); 
     });
 
     form.appendChild(title); 
@@ -110,7 +159,7 @@ function projectForm() {
     cancel.addEventListener('click', (event) => {
         event.preventDefault();
         document.querySelector("#projectName").value = ""; 
-        document.querySelector("#projectForm").classList.add("hidden"); 
+        showProjectList(); 
     });
 
     form.appendChild(title); 
@@ -140,32 +189,14 @@ function loadHeader() {
     addToDo.addEventListener('click', (event) => {
         event.preventDefault();
         const form = document.getElementById('toDoForm'); 
-
-        if (form.classList.contains('hidden')) {
-            const projectForm = document.getElementById('projectForm'); 
-            if (!projectForm.classList.contains('hidden')) {
-                projectForm.classList.add('hidden'); 
-            }
-            form.classList.remove('hidden'); 
-        } else {
-            form.classList.add('hidden'); 
-        }
+        showToDoList(); 
     });  
     addToDo.textContent = "+ Todo"; 
     
     const addProject = document.createElement("button"); 
     addProject.addEventListener('click', (event) => {
         event.preventDefault();
-        const form = document.getElementById('projectForm'); 
-        if (form.classList.contains('hidden')) {
-            const toDoForm = document.getElementById('toDoForm'); 
-            if (!toDoForm.classList.contains('hidden')) {
-                toDoForm.classList.add('hidden'); 
-            }
-            form.classList.remove('hidden'); 
-        } else {
-            form.classList.add('hidden'); 
-        }
+        showProjectForm(); 
     });
     addProject.textContent = "+ Project"; 
     
