@@ -6,35 +6,19 @@ export default class ToDo {
         this.priority = priority; 
     }
 
-    get title() {
+    getTitle() {
         return this.title; 
     }
 
-    set title(title) {
-        this.title = title; 
+    getDescription() {
+        return this.description;
     }
 
-    get description() {
-        return this.description; 
+    getPriority() {
+        return this.priority;
     }
 
-    set description(description) {
-        this.description = description; 
-    }
-
-    get date() {
+    getDate() {
         return this.date; 
-    }
-
-    set date(date) {
-        this.date = date; 
-    }
-
-    get priority() {
-        return this.priority; 
-    }
-
-    set priority(priority) {
-        this.priority = priority; 
     }
 }

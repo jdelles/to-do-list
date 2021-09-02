@@ -10,15 +10,6 @@ const projectManager = (() => {
         return projects; 
     }
 
-    let activeProject; 
-    let defaultProject; 
-
-    // const setActiveProject = (newActive) => {
-    //     activeProject.setActive(false); 
-    //     activeProject = newActive; 
-    //     activeProject.setActive(true); 
-    // }
-
     const createProject = (name) => {
         const newProject = new Project(name); 
         // setActiveProject(newProject); 
@@ -31,24 +22,22 @@ const projectManager = (() => {
         if (index > -1) {
             projects.splice(index, 1); 
         }
-        activeProject = defaultProject; 
     }
 
     const createDefaultProject = (() => {
-        defaultProject = createProject("default"); 
-        activeProject = defaultProject; 
+        createProject("default"); 
     })(); 
 
-    const addTodoToProject = (title, description, date, priority) => {
-        activeProject.addTodo(new ToDo(title, description, date, priority)); 
-    }
+    // const addTodoToProject = (title, description, date, priority) => {
+    //     activeProject.addTodo(new ToDo(title, description, date, priority)); 
+    // }
 
-    const removeTodoFromProject = (todo) => {
-        activeProject.removeToDo(todo); 
-        // update UI
-    }
+    // const removeTodoFromProject = (todo) => {
+    //     activeProject.removeToDo(todo); 
+    //     // update UI
+    // }
 
-    return {activeProject, getProjects, createProject, deleteProject, addTodoToProject, removeTodoFromProject}
+    return {getProjects, createProject, deleteProject}
 })();
 
 export default projectManager; 

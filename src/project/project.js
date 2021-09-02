@@ -20,6 +20,10 @@ export default class Project {
         }
     }
 
+    getProjectToDos() {
+        return this.projectToDos; 
+    }
+
     setActive(state) {
         this.active = state; 
     }

@@ -90,7 +90,7 @@ footer a:hover {
 
 .ghost-button {
     padding: 5px 10px; 
-    margin: 5px; 
+    margin: 5px 10px 5px 0px; 
     background-color: var(--color-anti-flash-white); 
     color: var(--color-middle-blue);
     font-size: 18px; 
@@ -120,4 +120,10 @@ footer a:hover {
     border-radius: 10px;
     padding: 15px; 
     box-shadow: 5px 10px var(--color-iceberg); 
+}
+
+.project-header, 
+.toDo-display {
+    display: grid; 
+    grid-template-columns: 3fr 1fr;
 }
