@@ -4,10 +4,39 @@ function updateDisplay() {
     const projectDiv = document.querySelector("#projectList"); 
     showProjectList(); 
     projectDiv.innerHTML = ""; 
+    
+    const intro = document.createElement("h2"); 
+    intro.textContent = "Project List"; 
+    projectDiv.appendChild(intro); 
+
     projectManager.getProjects().forEach(project => {
-        const p = document.createElement('p'); 
+        const div = document.createElement("div"); 
+        div.classList.add("project-display"); 
+        
+        const p = document.createElement("p"); 
         p.textContent = project.getName();
-        projectDiv.appendChild(p); 
+
+        const deleteProject = document.createElement("button"); 
+        deleteProject.textContent = "- Project";
+        deleteProject.classList.add("ghost-button"); 
+        deleteProject.addEventListener('click', (event) => {
+            event.preventDefault();
+            projectManager.deleteProject(project); 
+            updateDisplay(); 
+        });
+
+        const addToDo = document.createElement("button");
+        addToDo.addEventListener('click', (event) => {
+            event.preventDefault();
+            const form = document.getElementById('toDoForm'); 
+            showToDoForm(); 
+        });  
+        addToDo.textContent = "+ Todo"; 
+
+        div.appendChild(p); 
+        div.appendChild(deleteProject); 
+        div.appendChild(addToDo); 
+        projectDiv.appendChild(div); 
     }); 
 }
 
@@ -17,7 +46,7 @@ function projectDisplay() {
     return projectDiv; 
 }
 
-function showToDoList() {
+function showToDoForm() {
     const projectList = document.querySelector("#projectList");    
     const projectForm = document.querySelector("#projectForm"); 
     const toDoForm = document.querySelector("#toDoForm"); 
@@ -184,15 +213,7 @@ function loadHeader() {
 
     // add nav TODO: onclicks bugged
     const nav = document.createElement("nav"); 
-    
-    const addToDo = document.createElement("button");
-    addToDo.addEventListener('click', (event) => {
-        event.preventDefault();
-        const form = document.getElementById('toDoForm'); 
-        showToDoList(); 
-    });  
-    addToDo.textContent = "+ Todo"; 
-    
+       
     const addProject = document.createElement("button"); 
     addProject.addEventListener('click', (event) => {
         event.preventDefault();
@@ -200,7 +221,6 @@ function loadHeader() {
     });
     addProject.textContent = "+ Project"; 
     
-    nav.appendChild(addToDo);
     nav.appendChild(addProject); 
 
     header.appendChild(nav); 

@@ -29,7 +29,7 @@ const projectManager = (() => {
     const deleteProject = (name) => {
         const index = projects.indexOf(name); 
         if (index > -1) {
-            projectKeys.splice(index, 1); 
+            projects.splice(index, 1); 
         }
         activeProject = defaultProject; 
     }

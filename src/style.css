@@ -113,3 +113,11 @@ footer a:hover {
 #projectForm h2 {
     margin: 10px auto; 
 }
+
+.project-display {
+    margin-bottom: 20px;
+    border: 2px solid var(--color-middle-blue); 
+    border-radius: 10px;
+    padding: 15px; 
+    box-shadow: 5px 10px var(--color-iceberg); 
+}
