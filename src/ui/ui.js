@@ -1,5 +1,21 @@
 import projectManager from '../toDoManager/toDoManager.js'; 
 
+function updateDisplay() {
+    const projectDiv = document.querySelector("#projectList"); 
+    projectDiv.innerHTML = ""; 
+    projectManager.getProjects().forEach(project => {
+        const p = document.createElement('p'); 
+        p.textContent = project.getName();
+        projectDiv.appendChild(p); 
+    }); 
+}
+
+function projectDisplay() {
+    const projectDiv = document.createElement("div"); 
+    projectDiv.id = "projectList"; 
+    return projectDiv; 
+}
+
 function toDoForm() {
     const formDiv = document.createElement("div"); 
 
@@ -82,7 +98,10 @@ function projectForm() {
     submit.textContent = "Submit"; 
     submit.addEventListener('click', (event) => {
         event.preventDefault();
-        const name = document.querySelector("#projectName"); 
+        const name = document.querySelector("#projectName").value; 
+        projectManager.createProject(name); 
+        document.querySelector("#projectForm").classList.add("hidden"); 
+        updateDisplay(); 
     });
 
     const cancel = document.createElement("button"); 
@@ -178,6 +197,7 @@ function load() {
     const main = content.appendChild(loadMain()); 
     main.appendChild(toDoForm()); 
     main.appendChild(projectForm()); 
+    main.appendChild(projectDisplay()); 
     content.appendChild(loadFooter()); 
   }
  

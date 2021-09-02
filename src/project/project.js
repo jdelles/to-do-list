@@ -1,27 +1,26 @@
-export class Project {
-    constructor(projectName) {
-        this.projectName = projectName; 
+export default class Project {
+    constructor(name) {
+        this.projectName = name; 
         this.projectToDos = []; 
         this.active = true; 
     }
 
-    get projectName() {
+    getName() {
         return this.projectName; 
     }
 
-    get projectToDos() {
-        return this.projectToDos; 
-    }
-
-    set projectToDos(todo) {
+    addToDo(todo) {
         this.projectToDos.push(todo); 
     }
 
-    get active() {
-        return this.active; 
+    removeToDo(todo) {
+        const index = this.projectToDos.indexOf(todo); 
+        if (index > -1) {
+            this.projectToDos.splice(index, 1); 
+        }
     }
 
-    set active(state) {
+    setActive(state) {
         this.active = state; 
     }
 }

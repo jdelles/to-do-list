@@ -2,69 +2,53 @@ import {loadFromStorage, saveToStorage} from '../storage/storage.js';
 import Project from '../project/project.js'; 
 import ToDo from '../todos/todo.js'; 
 
-let projects = []; 
+const projects = []; 
 
-const projectManager = () => {
+const projectManager = (() => {
 
     function getProjects() {
         return projects; 
     }
-    // let activeProject; 
-    // let defaultProject; 
 
-    // const projects = new Map(); 
-    // const projectKeys = new Array(); 
-
-    // const validate = (name) => {
-    //     return !projects.has(name); 
-    // }
+    let activeProject; 
+    let defaultProject; 
 
     // const setActiveProject = (newActive) => {
+    //     activeProject.setActive(false); 
     //     activeProject = newActive; 
-    //     // update UI
+    //     activeProject.setActive(true); 
     // }
 
-    // const createProject = (name) => {
-    //     if (validate(name)) {
-    //         const newProject = project(name); 
-    //         setActiveProject(newProject); 
-    //         projects.set(name, newProject);
-    //         projectKeys.push(name); 
-    //         return newProject;  
-    //     } else {
-    //         alert('Project name must be unique'); 
-    //     }
-    // }
+    const createProject = (name) => {
+        const newProject = new Project(name); 
+        // setActiveProject(newProject); 
+        projects.push(newProject); 
+        return newProject;  
+    }
 
-    // const deleteProject = (name) => {
-    //     const toDelete = projects.get(name); 
-    //     toDelete.getToDos().forEach(removeTodoFromProject); 
-    //     projects.delete(name); 
-    //     const index = projectKeys.indexOf(name); 
-    //     if (index > -1) {
-    //         projectKeys.splice(index, 1); 
-    //     }
-    //     activeProject = defaultProject; 
-    //     // update UI
-    // }
+    const deleteProject = (name) => {
+        const index = projects.indexOf(name); 
+        if (index > -1) {
+            projectKeys.splice(index, 1); 
+        }
+        activeProject = defaultProject; 
+    }
 
-    // const createDefaultProject = (() => {
-    //     defaultProject = createProject("default"); 
-    //     projectKeys.push("default"); 
-    //     activeProject = defaultProject; 
-    // })(); 
+    const createDefaultProject = (() => {
+        defaultProject = createProject("default"); 
+        activeProject = defaultProject; 
+    })(); 
 
-    // const addTodoToSpecifiedProject = (title, description, date, priority, projectName) => {
-    //     projects.get(projectName).addTodoToProject(title, description, date, priority); 
-    //     // update UI
-    // }
+    const addTodoToProject = (title, description, date, priority) => {
+        activeProject.addTodo(new ToDo(title, description, date, priority)); 
+    }
 
-    // const removeTodoFromSpecifiedProject = (title, description, date, priority, projectName) => {
-    //     projects.get(projectName).removeTodoToProject(title, description, date, priority); 
-    //     // update UI
-    // }
+    const removeTodoFromProject = (todo) => {
+        activeProject.removeToDo(todo); 
+        // update UI
+    }
 
-    // return {activeProject, setActiveProject, createProject, deleteProject}
-}
+    return {activeProject, getProjects, createProject, deleteProject, addTodoToProject, removeTodoFromProject}
+})();
 
 export default projectManager; 
