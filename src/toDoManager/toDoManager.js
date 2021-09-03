@@ -1,6 +1,4 @@
-import {loadFromStorage, saveToStorage} from '../storage/storage.js'; 
 import Project from '../project/project.js'; 
-import ToDo from '../todos/todo.js'; 
 
 const projects = []; 
 
@@ -8,6 +6,13 @@ const projectManager = (() => {
 
     function getProjects() {
         return projects; 
+    }
+
+    function setProjects(value) {
+        Array.from(value).forEach(project => {
+            console.log(project); 
+            projects.push(project); 
+        })
     }
 
     const createProject = (name) => {
@@ -25,19 +30,12 @@ const projectManager = (() => {
     }
 
     const createDefaultProject = (() => {
-        createProject("default"); 
+        if (projects.length === 0) {
+            createProject("default"); 
+        }
     })(); 
 
-    // const addTodoToProject = (title, description, date, priority) => {
-    //     activeProject.addTodo(new ToDo(title, description, date, priority)); 
-    // }
-
-    // const removeTodoFromProject = (todo) => {
-    //     activeProject.removeToDo(todo); 
-    //     // update UI
-    // }
-
-    return {getProjects, createProject, deleteProject}
+    return {getProjects, setProjects, createProject, deleteProject}
 })();
 
 export default projectManager; 

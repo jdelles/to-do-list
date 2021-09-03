@@ -2,7 +2,6 @@ export default class Project {
     constructor(name) {
         this.projectName = name; 
         this.projectToDos = []; 
-        this.active = true; 
     }
 
     getName() {
@@ -22,9 +21,5 @@ export default class Project {
 
     getProjectToDos() {
         return this.projectToDos; 
-    }
-
-    setActive(state) {
-        this.active = state; 
     }
 }

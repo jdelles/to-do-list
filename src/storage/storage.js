@@ -38,7 +38,7 @@
   /**
    * Saves the to do list to local storage
    */
-  function saveToStorage() {
+  function saveToStorage(projects) {
     localStorage.setItem("projects", JSON.stringify(projects));
   }
   
@@ -50,6 +50,7 @@
       let data = localStorage.getItem("projects");
       return JSON.parse(data);
     }
+    return -1; 
   }
 
   export {saveToStorage, loadFromStorage}; 

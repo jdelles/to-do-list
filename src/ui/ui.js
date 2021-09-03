@@ -1,3 +1,4 @@
+import {loadFromStorage, saveToStorage} from '../storage/storage.js'; 
 import projectManager from '../toDoManager/toDoManager.js'; 
 import ToDo from '../todos/todo.js';
 
@@ -229,6 +230,8 @@ function updateDisplay() {
         div.appendChild(addToDo); 
 
         projectDiv.appendChild(div); 
+
+        saveToStorage(projectManager.getProjects()); 
     }); 
 }
 
@@ -366,6 +369,10 @@ function load() {
     main.appendChild(projectForm()); 
     main.appendChild(projectDisplay()); 
     content.appendChild(loadFooter()); 
+    const projectLog = loadFromStorage(); 
+    if (projectLog !== -1) {
+        projectManager.setProjects(projectLog); 
+    }
     updateDisplay(); 
   }
  
