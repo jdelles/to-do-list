@@ -202,23 +202,25 @@ function updateDisplay() {
         div.appendChild(projectHeader); 
 
         project.getProjectToDos().forEach(toDo => {
-            const toDoDiv = document.createElement("div"); 
-            toDoDiv.classList.add("toDo-display"); 
-            
-            const p = document.createElement("p"); 
-            p.textContent = toDo.getTitle();
+            if (toDo !== undefined && toDo !== null) {
+                const toDoDiv = document.createElement("div"); 
+                toDoDiv.classList.add("toDo-display"); 
+                
+                const p = document.createElement("p"); 
+                p.textContent = toDo.getTitle();
 
-            toDoDiv.appendChild(p);
+                toDoDiv.appendChild(p);
 
-            const editToDo = document.createElement("button"); 
-            editToDo.classList.add("ghost-button");
-            editToDo.textContent = "Edit"
-            editToDo.addEventListener("click", (event) => {
-                showToDoDetails(project, toDo); 
-            })
-            toDoDiv.appendChild(editToDo); 
+                const editToDo = document.createElement("button"); 
+                editToDo.classList.add("ghost-button");
+                editToDo.textContent = "Edit"
+                editToDo.addEventListener("click", (event) => {
+                    showToDoDetails(project, toDo); 
+                })
+                toDoDiv.appendChild(editToDo); 
 
-            div.appendChild(toDoDiv); 
+                div.appendChild(toDoDiv); 
+            }
         });        
         
         const addToDo = document.createElement("button");

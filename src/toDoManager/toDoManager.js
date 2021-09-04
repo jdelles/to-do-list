@@ -1,4 +1,5 @@
 import Project from '../project/project.js'; 
+import ToDo from '../todos/todo.js';
 
 const projects = []; 
 
@@ -9,10 +10,19 @@ const projectManager = (() => {
     }
 
     function setProjects(value) {
+        for (let i = 0; i < projects.length; i++) {
+            projects.pop(); 
+        }
+
         Array.from(value).forEach(project => {
-            console.log(project); 
-            projects.push(project); 
-        })
+            const proj = createProject(project.projectName); 
+
+            project.projectToDos.forEach(toDo => {
+                if (toDo !== undefined && toDo !== null) {
+                    proj.addToDo(new ToDo(toDo.title, toDo.description, toDo.priority, toDo.date)); 
+                }
+            }); 
+        }); 
     }
 
     const createProject = (name) => {
