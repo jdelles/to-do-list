@@ -93,22 +93,22 @@ function showToDoDetails(project, toDo) {
 
     const title = document.createElement("input"); 
     title.type = "text"; 
-    title.placeholder = currentTitle;  
+    title.value = currentTitle;  
     title.id = "title"; 
 
     const description = document.createElement("input"); 
     description.type = "text"; 
-    description.placeholder = currentDescription; 
+    description.value = currentDescription; 
     description.id = "description";
 
     const priority = document.createElement("input"); 
     priority.type = "text"; 
-    priority.placeholder = currentPriority; 
+    priority.value = currentPriority; 
     priority.id = "priority";
 
     const date = document.createElement("input"); 
     date.type = "text"; 
-    date.placeholder = currentDate; 
+    date.value = currentDate; 
     date.id = "date"; 
 
     const submit = document.createElement("button"); 
@@ -213,7 +213,7 @@ function updateDisplay() {
 
                 const editToDo = document.createElement("button"); 
                 editToDo.classList.add("ghost-button");
-                editToDo.textContent = "Edit"
+                editToDo.textContent = "Details"
                 editToDo.addEventListener("click", (event) => {
                     showToDoDetails(project, toDo); 
                 })

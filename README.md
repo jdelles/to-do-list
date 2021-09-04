@@ -29,5 +29,5 @@ This is the final project in this section of the JavaScript section titled Organ
 - [X] Separate application logic from DOM interaction (MVC pattern)
 - [X] UI Design objectives: A user must be able to 1. View all projects. 2. View all to dos in each project. 3. Expand a single to do to see / edit it's details. 4. Delete a to do. 
 - [ ] Consider using date-fns for manipulating dates and times
-- [ ] Use local storage to save and load list
+- [X] Use local storage to save and load list
 - [X] Publish to GitHub - will require additional config since it's looking for index.html but webpack is setup to use dist/index.html
